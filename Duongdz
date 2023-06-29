@@ -24,7 +24,7 @@ game:GetService("Players").LocalPlayer.Character.Venom.CaiNayDungDeDanh.RemoteEv
 end
 end)
 
-OwO:Toggle("KillauraVip(koCan2CaiDuoiKia)", false, function(state)
+OwO:Toggle("KillauraVip", false, function(state)
 Killaura = state
 end)
 
