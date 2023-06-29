@@ -1,13 +1,13 @@
 
 game.StarterGui:SetCore("SendNotification", {
-                            Title = "LoadingScript Free🔮🤓", 
+                            Title = "LoadingScript FreeðŸ”®ðŸ¤“", 
                             Text = "Key Success!" ,
                             Icon = "rbxassetid://13877859492",
                             Duration = 10
                         })
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/turtle"))()
 
-local OwO = library:Window("Made By Reiji")
+local OwO = library:Window("Made By Duong")
 
 OwO:Button("TP Raid", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2299.685791015625, 1035.02490234375, -2715.144775390625)
@@ -28,4 +28,4 @@ OwO:Button("FlyGui", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Reiji0001/Fly-Gui/main/Fly-Gui_Source"))()
 end)
 
-OwO:Label("Buy Script Paid In Crystal Hub", Color3.fromRGB(127, 143, 166))
+OwO:Label("Buy Script Paid In Duong Hub", Color3.fromRGB(127, 143, 166))
