@@ -24,7 +24,7 @@ game:GetServie("Players").LocalPlayer.Character.Venom.CaiNayDungDeDanh.RemoteEve
 end
 end)
 
-OwO:Toggle("FastAttackVenom (Raid)", false, function()
+OwO:Toggle("FastAttackFlameSword", false, function()
 while wait() do
 local args = {
     [1] = 1,
