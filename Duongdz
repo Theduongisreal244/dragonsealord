@@ -35,7 +35,7 @@ game:GetService("Players").LocalPlayer.Character.Venom.CaiNayDungDeDanh.RemoteEv
 end
 end)
 
-OwO:Toggle("KillauraVip(koCan2CaiDuoiKia)", false, function(state)
+OwO:Toggle("KillAura", false, function(state)
 Killaura = state
 end)
 
@@ -61,14 +61,6 @@ end)
 
 OwO:Button("FlyGui", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Reiji0001/Fly-Gui/main/Fly-Gui_Source"))()
-end)
-
-OwO:Button("KillAuraOn", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Theduongisreal244/On/main/On"))()
-end)
-
-OwO:Button("KillAuraOff", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Theduongisreal244/Off/main/Off"))()
 end)
 
 OwO:Label("Scripr free by duong", Color3.fromRGB(127, 143, 166))
