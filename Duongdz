@@ -55,13 +55,14 @@ spawn(function()
     end
 end)
 
-OwO:Button("FlyGui", function()
+OwO:Button("Menu Bay", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Reiji0001/Fly-Gui/main/Fly-Gui_Source"))()
 end)
 
 local OwO = library:Window("Linh Tinh")
 
-OwO:Button("EspBall+Fruit", function()
+OwO:Button("Esp Ball+Trái", function()
+while wait(1) do
 for i,v in pairs(game.Workspace:GetDescendants()) do -- grabs everything from workspace
     if v.ClassName == 'TouchTransmitter' and v.Parent.Name == 'Handle' then -- checks if it has a handle and if its a touchtransmitter
         local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
