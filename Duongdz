@@ -9,10 +9,6 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/blood
 
 local OwO = library:Window("Made By Duong")
 
-OwO:Button("TP Raid", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2299.685791015625, 1035.02490234375, -2715.144775390625)
-end)
-
 OwO:Toggle("Wave 5", false, function()
 while wait() do
 local args = {
@@ -85,5 +81,10 @@ for i,v in pairs(game.Workspace:GetDescendants()) do -- grabs everything from wo
         TextLabel.TextScaled = true -- if the text is scaled or not
     end
     end
+end)
+
+OwO:Button("TpRaid", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2299.685791015625, 1035.02490234375, -2715.144775390625)
+end)
 
 OwO:Label("Scripr free by duong", Color3.fromRGB(127, 143, 166))
