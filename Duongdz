@@ -31,7 +31,7 @@ local args = {
     [2] = game:GetService("Players").LocalPlayer
 }
 
-game:GetService("Players").LocalPlayer.Character.Venom.CaiNayDungDeDanh.RemoteEvent:FireServer(unpack(args))
+game:GetService("Players").LocalPlayer.Character.FlameSword.afsffafasfaf141fggas.RemoteEvent:FireServer(unpack(args))
 end
 end)
 
