@@ -20,28 +20,8 @@ local args = {
     [2] = game:GetService("Players").LocalPlayer
 }
 
-game:GetService("Players").LocalPlayer.Character.Venom.CaiNayDungDeDanh.RemoteEvent:FireServer(unpack(args))
+game:GetServie("Players").LocalPlayer.Character.Venom.CaiNayDungDeDanh.RemoteEvent.FireServer(unpack(args))
 end
-end)
-
-OwO:Button("FlyGui", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Reiji0001/Fly-Gui/main/Fly-Gui_Source"))()
-end)
-
-OwO:Label("Scripr free by duong", Color3.fromRGB(127, 143, 166))
-
-game.StarterGui:SetCore("SendNotification", {
-                            Title = "LoadingScript FreeðŸ”®ðŸ¤“", 
-                            Text = "Thanh Cong!" ,
-                            Icon = "rbxassetid://13877859492",
-                            Duration = 10
-                        })
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/turtle"))()
-
-local OwO = library:Window("Made By Duong")
-
-OwO:Button("TP Raid", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2299.685791015625, 1035.02490234375, -2715.144775390625)
 end)
 
 OwO:Toggle("FastAttackVenom (Raid)", false, function()
