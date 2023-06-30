@@ -13,14 +13,14 @@ OwO:Button("TP Raid", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2299.685791015625, 1035.02490234375, -2715.144775390625)
 end)
 
-OwO:Toggle("wave 5 raid(venom)", false, function()
+OwO:Toggle("Wave 5", false, function()
 while wait() do
 local args = {
     [1] = 1,
     [2] = game:GetService("Players").LocalPlayer
 }
 
-game:GetServie("Players").LocalPlayer.Character.Venom.CaiNayDungDeDanh.RemoteEvent.FireServer(unpack(args))
+game:GetService("Players").LocalPlayer.Character.Venom.CaiNayDungDeDanh.RemoteEvent:FireServer(unpack(args))
 end
 end)
 
