@@ -24,14 +24,14 @@ game:GetService("Players").LocalPlayer.Character.Venom.CaiNayDungDeDanh.RemoteEv
 end
 end)
 
-OwO:Toggle("Đánh nhanh kiếm lửa", false, function()
+OwO:Toggle("Venom(ngoài raid)", false, function()
 while wait() do
 local args = {
     [1] = 1,
     [2] = game:GetService("Players").LocalPlayer
 }
 
-game:GetService("Players").LocalPlayer.Character.FlameSword.afsffafasfaf141fggas.RemoteEvent:FireServer(unpack(args))
+game:GetService("Players").LocalPlayer.Character.Venom.Attack.RemoteEvent:FireServer(unpack(args))
 end
 end)
 
