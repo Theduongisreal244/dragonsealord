@@ -213,7 +213,7 @@ end
 end
 end)
 
-OwO:Toggle("FAT Venom", false, function(b)
+OwO:Toggle("FAT Venon", false, function(b)
 Venom = b
 end)
 
