@@ -1,11 +1,6 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/turtle"))()
 
-
-local OwO = library:Window("Raid")
-
-OwO:Button("TP To Raid", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2299.685791015625, 1035.02490234375, -2715.144775390625)
-end)
+local OwO = library:Window("Main Raid")
 
 OwO:Toggle("Killaura (Raid)", false, function(state)
 Killaura = state
@@ -31,7 +26,31 @@ spawn(function()
     end
 end)
 
-OwO:Toggle("Raid (Melee,Sword)", false, function(b)
+OwO:Toggle("Killaura (World)", false, function(state)
+Killaura = state
+end)
+
+spawn(function()
+    while wait() do
+        if Killaura then
+            for i,v in pairs(game.Workspace.Npc:GetDescendants()) do
+                if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                    pcall(function()
+                        repeat wait(.1)
+                            sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+                            v.Humanoid.Health = 0
+                            v.HumanoidRootPart.CanCollide = false
+                            v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                            v.HumanoidRootPart.Transparency = 1000
+                        until not Killaura or not v.Parent or v.Humanoid.Health <= 1
+                    end)
+                end
+            end
+        end
+    end
+end)
+
+OwO:Toggle("Auto Raid Melee,Sword", false, function(b)
 CC = b
 end)
 
@@ -54,9 +73,21 @@ end
 end
 end)
 
-OwO:Label("Made by duong", Color3.fromRGB(127, 143, 166))
+OwO:Button("TP To Raid", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2299.685791015625, 1035.02490234375, -2715.144775390625)
+end)
 
-local OwO = library:Window("FastAttack (Raid)")
+OwO:Button("AntiLag", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/crystalnerd/ScriptLinhTinh/main/AntiLag"))()
+end)
+
+OwO:Button("FlyGui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Reiji0001/Fly-Gui/main/Fly-Gui_Source"))()
+end)
+
+OwO:Label("Made by Reiji", Color3.fromRGB(127, 143, 166))
+
+local OwO = library:Window("FastAttack")
 
 OwO:Toggle("FAT New Melee", false, function(b)
 CBLRaid = b
@@ -96,7 +127,26 @@ end
 end
 end)
 
-OwO:Toggle("FAT DragonCombat (Raid)", false, function(b)
+OwO:Toggle("FAT Venom(World)", false, function(b)
+Venom = b
+end)
+
+spawn(function()
+while wait() do
+if Venom then
+pcall(function()
+local args = {
+    [1] = 1,2,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.Venom.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FAT DragonCombat", false, function(b)
 DragonCombatRaid = b
 end)
 
@@ -107,6 +157,91 @@ pcall(function()
 local args = {
     [1] = 2,
     [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.DragonCombat.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FAT DarkSword", false, function(b)
+FastAttackDarkSwordRaid = b
+end)
+
+spawn(function()
+while wait() do
+if FastAttackDarkSwordRaid then
+pcall(function()
+local args = {
+    [1] = 1,2,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.DarkSword.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FAT FlameSword", false, function(b)
+FastAttackFlameSwordRaid = b
+end)
+
+spawn(function()
+while wait() do
+if FastAttackFlameSwordRaid then
+pcall(function()
+local args = {
+    [1] = 1,2,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.FlameSword.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FAT YoruV2", false, function(b)
+FastAttackDB2Raid = b
+end)
+
+spawn(function()
+while wait() do
+if FastAttackDB2Raid then
+pcall(function()
+local args = {
+    [1] = 1,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.DarkBladeAwake.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FAT YoruV1", false, function(b)
+DarkBladeRaid = b
+end)
+
+spawn(function()
+while wait() do
+if DarkBladeRaid then
+pcall(function()
+local args = {
+    [1] = 1,2,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.DarkBlade.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Label("Remake By Nerd,Jew", Color3.fromRGB(127, 143, 166))    [2] = game:GetService("Players").LocalPlayer
 }
 
 game:GetService("Players").LocalPlayer.Character.DragonCombat.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
