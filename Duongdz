@@ -127,25 +127,6 @@ end
 end
 end)
 
-OwO:Toggle("FAT Venom(World)", false, function(b)
-Venom = b
-end)
-
-spawn(function()
-while wait() do
-if Venom then
-pcall(function()
-local args = {
-    [1] = 1,2,
-    [2] = game:GetService("Players").LocalPlayer
-}
-
-game:GetService("Players").LocalPlayer.Character.Venom.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
-end)
-end
-end
-end)
-
 OwO:Toggle("FAT DragonCombat", false, function(b)
 DragonCombatRaid = b
 end)
