@@ -1,1 +1,323 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/turtle"))()
+
+local OwO = library:Window("Main Raid")
+
+OwO:Toggle("Killaura (Raid)", false, function(state)
+Killaura = state
+end)
+
+spawn(function()
+    while wait() do
+        if Killaura then
+            for i,v in pairs(game.Workspace.SpawnEnemy:GetDescendants()) do
+                if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                    pcall(function()
+                        repeat wait(.1)
+                            sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+                            v.Humanoid.Health = 0
+                            v.HumanoidRootPart.CanCollide = false
+                            v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                            v.HumanoidRootPart.Transparency = 1000
+                        until not Killaura or not v.Parent or v.Humanoid.Health <= 1
+                    end)
+                end
+            end
+        end
+    end
+end)
+
+OwO:Toggle("Killaura (World)", false, function(state)
+Killaura = state
+end)
+
+spawn(function()
+    while wait() do
+        if Killaura then
+            for i,v in pairs(game.Workspace.Npc:GetDescendants()) do
+                if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                    pcall(function()
+                        repeat wait(.1)
+                            sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+                            v.Humanoid.Health = 0
+                            v.HumanoidRootPart.CanCollide = false
+                            v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                            v.HumanoidRootPart.Transparency = 1000
+                        until not Killaura or not v.Parent or v.Humanoid.Health <= 1
+                    end)
+                end
+            end
+        end
+    end
+end)
+
+OwO:Toggle("Auto Raid Melee,Sword", false, function(b)
+CC = b
+end)
+
+spawn(function()
+    while wait() do
+        if CC then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-68.81217956542969, 138.3164520263672, 40.44826889038086)
+        pcall(function()
+spawn(function()
+    game:GetService("RunService").Heartbeat:Connect(function()
+        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid") then
+            setfflag("HumanoidParallelRemoveNoPhysics", "False")
+            setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
+            game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(11)
+        end
+    end)
+end)
+end)
+end
+end
+end)
+
+OwO:Button("TP To Raid", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2299.685791015625, 1035.02490234375, -2715.144775390625)
+end)
+
+OwO:Button("AntiLag", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/crystalnerd/ScriptLinhTinh/main/AntiLag"))()
+end)
+
+OwO:Button("FlyGui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Reiji0001/Fly-Gui/main/Fly-Gui_Source"))()
+end)
+
+OwO:Label("Made by Reiji", Color3.fromRGB(127, 143, 166))
+
+local OwO = library:Window("FastAttackRaid")
+
+OwO:Toggle("FAT Melee L...", false, function(b)
+CBLRaid = b
+end)
+
+spawn(function()
+while wait() do
+if CBLRaid then
+pcall(function()
+local args = {
+    [1] = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.LegendaryCombat.DungCoHackNua.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FAT Venom", false, function(b)
+Venom = b
+end)
+
+spawn(function()
+while wait() do
+if Venom then
+pcall(function()
+local args = {
+    [1] = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.Venom.DungCoHackNua.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FAT DragonCombat", false, function(b)
+DragonCombatRaid = b
+end)
+
+spawn(function()
+while wait() do
+if DragonCombatRaid then
+pcall(function()
+local args = {
+    [1] = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.DragonCombat.DungCoHackNua.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FAT DarkSword", false, function(b)
+FastAttackDarkSwordRaid = b
+end)
+
+spawn(function()
+while wait() do
+if FastAttackDarkSwordRaid then
+pcall(function()
+local args = {
+    [1] = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.DarkSword.DungCoHackNua.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FAT FlameSword", false, function(b)
+FastAttackFlameSwordRaid = b
+end)
+
+spawn(function()
+while wait() do
+if FastAttackFlameSwordRaid then
+pcall(function()
+local args = {
+    [1] = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.FlameSword.DungCoHackNua.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FAT YoruV2", false, function(b)
+FastAttackDB2Raid = b
+end)
+
+spawn(function()
+while wait() do
+if FastAttackDB2Raid then
+pcall(function()
+local args = {
+    [1] = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.DarkBladeAwake.DungCoHackNua.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+local OwO = library:Window("FastAttackWorld")
+
+OwO:Toggle("FAT New Melee", false, function(b)
+CBLWorld = b
+end)
+
+spawn(function()
+while wait() do
+if CBLWorld then
+pcall(function()
+local args = {
+    [1] = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.LegendaryCombat.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FAT Venom", false, function(b)
+VenomWorld = b
+end)
+
+spawn(function()
+while wait() do
+if VenomWorld then
+pcall(function()
+local args = {
+    [1] = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.Venom.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FAT DragonCombat", false, function(b)
+DragonCombatWorld = b
+end)
+
+spawn(function()
+while wait() do
+if DragonCombatWorld then
+pcall(function()
+local args = {
+    [1] = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.DragonCombat.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FAT DarkSword", false, function(b)
+FastAttackDarkSwordWorld = b
+end)
+
+spawn(function()
+while wait() do
+if FastAttackDarkSwordWorld then
+pcall(function()
+local args = {
+    [1] = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.DarkSword.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FAT FlameSword", false, function(b)
+FastAttackFlameSwordWorld = b
+end)
+
+spawn(function()
+while wait() do
+if FastAttackFlameSwordWorld then
+pcall(function()
+local args = {
+    [1] = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.FlameSword.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FAT YoruV2", false, function(b)
+FastAttackDB2World = b
+end)
+
+spawn(function()
+while wait() do
+if FastAttackDB2World then
+pcall(function()
+local args = {
+    [1] = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.DarkBladeAwake.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Label("Remake By Duong", Color3.fromRGB(127, 143, 166))
 
